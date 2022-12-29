@@ -315,19 +315,23 @@ const day = date.getDate()
 console.log(year, month, day, date);
 
 const ar = [];
-ar.push(year, month, day )
+ar.push(day,month,year )
 console.log(ar);
 
-let sum1=0;
+let sums =0;
 const func = (arr) => {
-   
-    return arr.map(item => {
-        
-      return `${item[0]} + ${item[1]} + ${item[2]} = `
-    })
+   return arr.reduce((a, b) => a + b, sums)
+    
 }
 
-console.log(func(ar));
 
-//a sdasdasd
+console.log(`${ar[0]} + ${ar[1]} + ${ar[2]} = ${func(ar)}`);
+
+
+const halil =[1,2,3,4,5]
+
+const mustafa =[]
+halil.map(item => mustafa.push(item))
+
+console.log("sdaa",halil == mustafa);
 
